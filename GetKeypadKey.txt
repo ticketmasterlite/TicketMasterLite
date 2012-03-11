@@ -1,0 +1,32 @@
+unsigned char GetKeypadKey() {
+   unsigned char c='\0';
+   // Check keys in col 1
+   PORTC = 0xFF; PORTC = SetBit(PORTC,4,0); // Set all col bits, then PC4 to 0
+   if (GetBit(PINC,0)==0) { c = 1;}
+   if (GetBit(PINC,1)==0) { c = 4;}
+   if (GetBit(PINC,2)==0) { c = 7;}
+   if (GetBit(PINC,3)==0) { c = '*';}
+   
+   // Check keys in col 2	
+   PORTC = 0xFF; PORTC = SetBit(PORTC,5,0);
+   if (GetBit(PINC,0)==0) { c = 2;}
+   if (GetBit(PINC,1)==0) { c = 5;}
+   if (GetBit(PINC,2)==0) { c = 8;}
+   if (GetBit(PINC,3)==0) { c = 0;}
+   
+   // Check keys in col 3	
+   PORTC = 0xFF; PORTC = SetBit(PORTC,6,0);
+   if (GetBit(PINC,0)==0) { c = 3;}
+   if (GetBit(PINC,1)==0) { c = 6;}
+   if (GetBit(PINC,2)==0) { c = 9;}
+   if (GetBit(PINC,3)==0) { c = '#';}
+   
+   // Check keys in col 4	
+   PORTC = 0xFF; PORTC = SetBit(PORTC,7,0);
+   if (GetBit(PINC,0)==0) { c = 'A';}
+   if (GetBit(PINC,1)==0) { c = 'B';}
+   if (GetBit(PINC,2)==0) { c = 'C';}
+   if (GetBit(PINC,3)==0) { c = 'D';}
+
+   return(c);
+}
