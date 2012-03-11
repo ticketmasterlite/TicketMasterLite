@@ -1,0 +1,35 @@
+pname: My System
+Number of Graphs: 2
+Macrocode: /*This code will be accessible from all State Machines.*/
+name: State Machihgne 5
+abbrv: SM5
+period: 1000
+num_nodes: 1
+num_edges: 0
+globalcode: /*VARIABLES MUST BE DECLARED STATIC*/\r\n/*e.g., static int x = 0;*/\r\n/*Define user variables for this state machine here.*/
+localcode: 
+enable_timer: True
+enable_uart: False
+node:
+name: s0
+id: 0
+isinitial: True
+actions: 
+x: 59
+y: 67
+name: Blink
+abbrv: SM
+period: 100
+num_nodes: 1
+num_edges: 0
+globalcode: /*VARIABLES MUST BE DECLARED STATIC*/\r\n/*e.g., static int x = 0;*/\r\n/*Define user variables for this state machine here.*/
+localcode: 
+enable_timer: True
+enable_uart: False
+node:
+name: s0
+id: 0
+isinitial: True
+actions: 
+x: 59
+y: 67
